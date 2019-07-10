@@ -23,5 +23,5 @@ void main() {
   if ( st.x > 0.60 ){ color = mix(green,  blue,   pct); }
   if ( st.x > 0.80 ){ color = mix(blue,   indigo, pct); }
 
-	gl_FragColor = vec4(color,1.0);
+  gl_FragColor = vec4(color,1.0);
 }
