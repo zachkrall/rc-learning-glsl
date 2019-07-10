@@ -46,10 +46,11 @@ void main() {
 
 
   // Extract just the fraction part (fract()) of the resultant of sin(x).
-  // Add the higher integer (ceil()) and the smaller integer (floor()) of the resultant of sin(x) to get a digital wave of 1 and -1 values.
+  // float y = fract(sin(st.x));
 
-  // TODO:
-  // float y = fract(sin( ceil(st.x) + floor(st.x) )*4.0) ;
+  // Add the higher integer (ceil()) and the smaller integer (floor()) of the resultant of sin(x) to get a digital wave of 1 and -1 values.
+  // float y = fract((ceil(sin(st.x+u_time)) + floor(sin(st.x+u_time))) * 0.3);
+
 
   float y = st.x;
 

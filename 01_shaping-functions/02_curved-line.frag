@@ -29,11 +29,11 @@ void main() {
   // float y = pow(st.x, 5.);
 
   // Bouncing up
-  float y = abs(cos(st.x* 10.) * sin(st.x*2.));
+  // float y = abs(cos(st.x* 10.) * sin(st.x*2.));
 
   // Fract
   // repeating our viewport 4 times
-  // float y = fract(st.x * 4.0);
+  float y = fract(st.x * 5.0);
 
   // Animated Fract
   // float y = fract(st.x * (abs(sin(u_time)*4.0)+1.) );
