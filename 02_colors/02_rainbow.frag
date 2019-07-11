@@ -17,11 +17,13 @@ void main() {
 
   vec3 color = vec3(0.);
 
-  if ( st.x > 0.00 ){ color = mix(red,    orange, pct); }
-  if ( st.x > 0.20 ){ color = mix(orange, yellow, pct); }
-  if ( st.x > 0.40 ){ color = mix(yellow, green,  pct); }
-  if ( st.x > 0.60 ){ color = mix(green,  blue,   pct); }
-  if ( st.x > 0.80 ){ color = mix(blue,   indigo, pct); }
+  float pos = st.x;
+
+  if ( pos > 0.00 ){ color = mix(red,    orange, pct); }
+  if ( pos > 0.20 ){ color = mix(orange, yellow, pct); }
+  if ( pos > 0.40 ){ color = mix(yellow, green,  pct); }
+  if ( pos > 0.60 ){ color = mix(green,  blue,   pct); }
+  if ( pos > 0.80 ){ color = mix(blue,   indigo, pct); }
 
   gl_FragColor = vec4(color,1.0);
 }

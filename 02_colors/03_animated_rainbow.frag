@@ -14,20 +14,19 @@ vec3 indigo = vec3(0.5,0.0,1.0);
 
 void main() {
   vec2 st = gl_FragCoord.xy/u_resolution;
-
   vec3 color = vec3(1.,0.,0.);
 
   float len = 6.0;
 
-  st.x = fract(st.x+u_time * 0.5);
-  float pct = fract(st.x * len);
+  float pos = fract(st.x+u_time * 0.5);
+  float pct = fract(pos * len);
 
-  if ( st.x > (0.0) )    { color = mix(red,    orange, pct); }
-  if ( st.x > (1.0/len) ){ color = mix(orange, yellow, pct); }
-  if ( st.x > (2.0/len) ){ color = mix(yellow, green,  pct); }
-  if ( st.x > (3.0/len) ){ color = mix(green,  blue,   pct); }
-  if ( st.x > (4.0/len) ){ color = mix(blue,   indigo, pct); }
-  if ( st.x > (5.0/len) ){ color = mix(indigo, red,    pct); }
+  if ( pos > (0.0) )    { color = mix(red,    orange, pct); }
+  if ( pos > (1.0/len) ){ color = mix(orange, yellow, pct); }
+  if ( pos > (2.0/len) ){ color = mix(yellow, green,  pct); }
+  if ( pos > (3.0/len) ){ color = mix(green,  blue,   pct); }
+  if ( pos > (4.0/len) ){ color = mix(blue,   indigo, pct); }
+  if ( pos > (5.0/len) ){ color = mix(indigo, red,    pct); }
 
   gl_FragColor = vec4(color,1.0);
 }

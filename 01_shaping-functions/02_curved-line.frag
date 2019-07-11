@@ -29,11 +29,11 @@ void main() {
   // float y = pow(st.x, 5.);
 
   // Bouncing up
-  // float y = abs(cos(st.x* 10.) * sin(st.x*2.));
+  float y = abs(cos(st.x* 10.) * sin(st.x*2.));
 
   // Fract
   // repeating our viewport 4 times
-  float y = fract(st.x * 5.0);
+  // float y = fract(st.x * 10.0);
 
   // Animated Fract
   // float y = fract(st.x * (abs(sin(u_time)*4.0)+1.) );
@@ -50,7 +50,9 @@ void main() {
 
   // This plots the colored line
   float pct = plot(st, y);
-  color = (1.0-pct)*color+pct*vec3(0.,0.,1.0);
+  color = (pct)*mix(vec3(0.,1.,0.0), vec3(0.,0.,1.), st.x);
+
+  // color = (1.0-pct)*color+pct*vec3(0.,0.,1.0);
 
 	gl_FragColor = vec4(color,1.0);
 }
