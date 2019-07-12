@@ -21,7 +21,7 @@ void main(){
   vec3 color = vec3(0.0);
 
   vec2 center    = vec2(0.5)-st;
-  float amp      = sin(u_time) + 2.0;
+  float amp      = sin(u_time * 10.) + 2.0;
   float toCenter = length(center) * amp;
 
   float value = 1.0 - toCenter;
